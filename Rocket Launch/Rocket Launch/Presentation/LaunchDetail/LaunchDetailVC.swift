@@ -1,17 +1,18 @@
 //
-//  BaseVC.swift
+//  LaunchDetailVC.swift
 //  Rocket Launch
 //
-//  Created by Maxym Sahaydak on 2/12/18.
+//  Created by Maxym Sahaydak on 2/14/18.
 //  Copyright © 2018 Maxym Sahaydak. All rights reserved.
 //
 
 import UIKit
 
-class BaseVC: UIViewController {
-
+class LaunchDetailVC: BaseVC {
+    var launchID: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
@@ -19,17 +20,7 @@ class BaseVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
-    //MAKR:
-    func showHUD() {
-
-    }
-
-
-    func hideHUD() {
-
-    }
+    
 
     /*
     // MARK: - Navigation
