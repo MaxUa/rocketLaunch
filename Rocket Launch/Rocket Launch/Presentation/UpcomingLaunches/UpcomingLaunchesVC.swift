@@ -12,7 +12,9 @@ class UpcomingLaunchesVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        BaseInfoAPIClient().getUpcomingLaunches { (responseArr, isSuccess, errorMessage) in
 
+        }
         // Do any additional setup after loading the view.
     }
 
