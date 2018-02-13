@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class BaseVC: UIViewController {
 
@@ -20,15 +21,14 @@ class BaseVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
     //MAKR:
     func showHUD() {
-
+        SVProgressHUD.show()
     }
 
 
     func hideHUD() {
-
+        SVProgressHUD.dismiss()
     }
 
     /*
