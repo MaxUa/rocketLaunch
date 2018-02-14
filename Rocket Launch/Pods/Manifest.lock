@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.5.1)
+  - ReadMoreTextView (2.0.0)
   - SwiftProgressHUD (0.0.5)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - ReadMoreTextView
   - SwiftProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  ReadMoreTextView: aefb9ffe11922c87fd39a09a988d7cc74c8438ba
   SwiftProgressHUD: 74856c5d9538bad076d449c2a2c72af51e62ab84
 
-PODFILE CHECKSUM: 40b70ca91370195133e47fc091a2009a54bd923e
+PODFILE CHECKSUM: b03bf8d4daff21ad5ce9f09af336710012256799
 
 COCOAPODS: 1.3.1
