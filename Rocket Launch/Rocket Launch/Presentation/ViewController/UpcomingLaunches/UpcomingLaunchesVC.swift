@@ -44,7 +44,7 @@ class UpcomingLaunchesVC: BaseVC {
     }
 
     //MARK: - Private methods
-    func initPresenter() {
+    override func initPresenter() {
         tableView.dataSource = presenter
 
         presenter.loadingStatusUpdated = {[weak self] in
@@ -62,9 +62,6 @@ class UpcomingLaunchesVC: BaseVC {
             self?.tableView.reloadData()
         }
     }
-
-
-    
 }
 
 extension UpcomingLaunchesVC {

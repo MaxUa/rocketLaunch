@@ -32,12 +32,24 @@ class ApiClient {
         }
     }
     
-    func get<T: Codable>(_ url: String, params: [String: Any]?, header: [String: String]?, responseObject: T.Type, completion: @escaping(Any?, Bool, String?)->Void) {
+//    func get<T: Codable>(_ url: String, params: [String: Any]?, header: [String: String]?, responseObject: T.Type, completion: @escaping(Any?, Bool, String?)->Void) {
+//        self.get(url, params: params, headers: header) { (response) in
+//            do {
+//                let decoder = JSONDecoder()
+//                let responseObject = try decoder.decode(T.self, from: response.data!)
+//                completion(responseObject, true, nil)
+//            } catch let error {
+//                completion(nil, false, error.localizedDescription)
+//            }
+//        }
+//    }
+
+    func get<T: Codable>(_ url: String, params: [String:Any]?, header: [String: String]?, completion:@escaping(T?, Bool, String?) -> Void) {
         self.get(url, params: params, headers: header) { (response) in
             do {
                 let decoder = JSONDecoder()
-                let responseObject = try decoder.decode(T.self, from: response.data!)
-                completion(responseObject, true, nil)
+                let model = try decoder.decode(T.self, from: response.data!)
+                completion(model, true, nil)
             } catch let error {
                 completion(nil, false, error.localizedDescription)
             }

@@ -21,12 +21,16 @@ class BaseVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    //MAKR:
+    //MAKR: - Base methods
     func showHUD() {
         SwiftProgressHUD.showWait()
     }
 
     func hideHUD() {
         SwiftProgressHUD.hideAllHUD()
+    }
+
+    func initPresenter() {
+        fatalError("Presenter should be created for inherited class")
     }
 }

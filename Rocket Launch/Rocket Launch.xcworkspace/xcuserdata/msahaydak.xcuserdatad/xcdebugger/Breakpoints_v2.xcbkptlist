@@ -57,61 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rocket Launch/API/ApiClients/BaseInfoAPIClient/BaseInfoAPIClient.swift"
-            timestampString = "540262982.3463939"
+            filePath = "Rocket Launch/Presentation/ViewController/LaunchDetail/LaunchDetailPresenter.swift"
+            timestampString = "540343700.510702"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "getLaunchFullInfo(with:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Rocket_Launch.BaseInfoAPIClient.getLaunchFullInfo(with: Swift.Int, completion: (Any, Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Rocket Launch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/API/ApiClients/BaseInfoAPIClient/BaseInfoAPIClient.swift"
-                  timestampString = "540262982.442636"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "389">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; () in Rocket_Launch.BaseInfoAPIClient.getLaunchFullInfo(with: Swift.Int, completion: (Any, Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Rocket Launch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/API/ApiClients/BaseInfoAPIClient/BaseInfoAPIClient.swift"
-                  timestampString = "540262982.445287"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "1276">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rocket Launch/API/ApiClient.swift"
-            timestampString = "540262982.346507"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "get(_:params:header:responseObject:completion:)"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "loadAlunchDetail(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,14 +73,78 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rocket Launch/API/ApiClient.swift"
-            timestampString = "540262982.346562"
+            filePath = "Rocket Launch/Presentation/ViewController/LaunchDetail/LaunchDetailVC.swift"
+            timestampString = "540343700.510785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "get(_:params:header:responseObject:completion:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "updateUI()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rocket Launch/Presentation/ViewController/LaunchDetail/LaunchDetailVC.swift"
+            timestampString = "540343700.511186"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "updateUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rocket Launch/Presentation/ViewController/LaunchDetail/LaunchDetailVC.swift"
+            timestampString = "540343700.511457"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "updateUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rocket Launch/Presentation/ViewController/LaunchDetail/LaunchDetailVC.swift"
+            timestampString = "540343700.511717"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "updateUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rocket Launch/Presentation/ViewController/LaunchDetail/LaunchDetailVC.swift"
+            timestampString = "540343700.511978"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "baseInfoView"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -9,23 +9,15 @@
 import Foundation
 import UIKit
 
-class UpcomingLaunchesPresenter: NSObject {
+class UpcomingLaunchesPresenter: BasePresenter {
 
     //MARK: - Closure
-    var loadingStatusUpdated: (()->())?
     var reloadTableViewClosure: (()->())?
 
     //MAKR: - Private variables
     private var upcomingLaunchesArr: [BaseInfoModel] = [BaseInfoModel]() {
         didSet {
             reloadTableViewClosure?()
-        }
-    }
-
-    //MAKR: 
-    var isLoading: Bool = false {
-        didSet {
-            self.loadingStatusUpdated?()
         }
     }
 
@@ -36,7 +28,9 @@ class UpcomingLaunchesPresenter: NSObject {
         self.isLoading = true
         BaseInfoAPIClient().getUpcomingLaunches { [weak self] (responseArr, isSuccess, errorMessage) in
             self?.isLoading = false
-            self?.upcomingLaunchesArr = responseArr as! [BaseInfoModel]
+            if let launchesInfoArr = responseArr {
+                self?.upcomingLaunchesArr = launchesInfoArr
+            }
         }
     }
 

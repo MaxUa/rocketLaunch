@@ -8,21 +8,21 @@
 
 import Foundation
 class BaseInfoAPIClient: ApiClient {
-    func getUpcomingLaunches(completion: @escaping ([Any]?, Bool, String?) -> Void) {
-        get("launch", params: ["next": 50], header: nil, responseObject: BaseInfoLaunches.self) { (responseObject, isSuccess, errorMessage) in
-            if isSuccess {
-                guard let launchResponse = responseObject as? BaseInfoLaunches else {completion(nil, true, "Something went wrong"); return}
-                completion(launchResponse.launches, true, nil)
-            } else {
-                completion(nil, false, errorMessage)
-            }
+    func getUpcomingLaunches(completion: @escaping ([BaseInfoModel]?, Bool, String?) -> Void) {
+        get("launch", params: ["next": 50], header: nil) { (model: BaseInfoLaunches?, isSucces, errorMessage) in
+            guard let _model = model else {completion(nil, false, "Something went wrong"); return}
+            completion(_model.launches, true, nil)
         }
     }
 
-    func getLaunchFullInfo(with id: Int, completion: @escaping(Any, Bool, String?) -> Void) {
-        get("launch", params: ["id": id, "mode":"verbose"], header: nil, responseObject: FullInfoLaunches.self) { (responseObject, isSuccess, errorMessage) in
-            let fullInfoModel = responseObject as! FullInfoLaunches
-            print(fullInfoModel)
+    func getLaunchFullInfo(with id: Int, completion: @escaping(FullInfoModel?, Bool, String?) -> Void) {
+        get("launch", params: ["id": id, "mode":"verbose"], header: nil) { (model:FullInfoLaunches?, isSuccess, errorMessage) in
+            guard let _model = model,
+                let launches = _model.launches,
+                let launch = launches.first else {completion(nil, false, "Something went wrong"); return}
+
+            completion(launch, true, nil)
+            
         }
     }
 }

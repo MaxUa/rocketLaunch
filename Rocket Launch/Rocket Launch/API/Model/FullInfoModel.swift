@@ -24,7 +24,7 @@ struct FullInfoModel: LaunchInfoProtocol, Codable {
     var infoURL: String?
     var holdreason: String?
 
-    var location: LaunchLocationModel
+    var location: LaunchLocationModel?
     var missions: [MissionModel]
     var rocket: RocketModel
 
