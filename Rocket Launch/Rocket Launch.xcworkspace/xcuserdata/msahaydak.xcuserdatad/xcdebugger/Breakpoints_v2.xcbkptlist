@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rocket Launch/API/ApiClients/BaseInfoAPIClient/BaseInfoAPIClient.swift"
-            timestampString = "540260363.792024"
+            timestampString = "540262982.3463939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -74,7 +74,7 @@
                   moduleName = "Rocket Launch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/API/ApiClients/BaseInfoAPIClient/BaseInfoAPIClient.swift"
-                  timestampString = "540260363.8743351"
+                  timestampString = "540262982.442636"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "26"
@@ -89,12 +89,12 @@
                   moduleName = "Rocket Launch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/API/ApiClients/BaseInfoAPIClient/BaseInfoAPIClient.swift"
-                  timestampString = "540260363.877751"
+                  timestampString = "540262982.445287"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "26"
                   endingLineNumber = "26"
-                  offsetFromSymbolStart = "3627">
+                  offsetFromSymbolStart = "1276">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rocket Launch/API/ApiClient.swift"
-            timestampString = "540260363.792083"
+            timestampString = "540262982.346507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rocket Launch/API/ApiClient.swift"
-            timestampString = "540260363.792413"
+            timestampString = "540262982.346562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"

@@ -35,10 +35,10 @@ struct LaunchPadModel: Codable {
     var name: String
     var mapURL: String
     var latitude: Float
-    var longtitude: Float
+    var longitude: Float
 
     private enum CodingKeys: String, CodingKey {
-        case id, name, mapURL, latitude, longtitude
+        case id, name, mapURL, latitude, longitude
     }
 
     public init(from decoder: Decoder) throws {
@@ -47,6 +47,6 @@ struct LaunchPadModel: Codable {
         self.name = try container.decode(String.self, forKey: .name)
         self.mapURL = try container.decode(String.self, forKey: .mapURL)
         self.latitude = try container.decode(Float.self, forKey: .latitude)
-        self.longtitude = try container.decode(Float.self, forKey: .longtitude)
+        self.longitude = try container.decode(Float.self, forKey: .longitude)
     }
 }

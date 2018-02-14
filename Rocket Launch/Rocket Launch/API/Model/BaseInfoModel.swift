@@ -17,7 +17,6 @@ protocol LaunchInfoProtocol {
     var status: Int? {get set}
 }
 
-
 public struct BaseInfoModel: Codable, LaunchInfoProtocol {
     var id: Int?
     var name: String?

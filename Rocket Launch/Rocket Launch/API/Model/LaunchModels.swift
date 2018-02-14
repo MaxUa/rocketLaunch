@@ -7,11 +7,26 @@
 //
 
 import Foundation
-struct LaunchModel: Codable {
+protocol LaunchesInfoProtocol {
+    var status: String? {get set}
+    var errorMessage: String? {get set}
+    var total: Int? {get set}
+    var offset: Int? {get set}
+    var count: Int? {get set}
+}
+
+struct FullInfoLaunches: Codable, LaunchesInfoProtocol {
+    var status: String?
+    var errorMessage: String?
+    var total: Int?
+    var offset: Int?
+    var count: Int?
+
+    var launches: [FullInfoModel]?
     
 }
 
-public struct LaunchesModel: Codable {
+public struct BaseInfoLaunches: Codable, LaunchesInfoProtocol {
     var status: String?
     var errorMessage: String?
     var launches: [BaseInfoModel]?
