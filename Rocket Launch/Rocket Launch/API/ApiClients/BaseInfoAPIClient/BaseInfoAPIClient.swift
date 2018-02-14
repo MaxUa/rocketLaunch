@@ -18,4 +18,11 @@ class BaseInfoAPIClient: ApiClient {
             }
         }
     }
+
+    func getLaunchFullInfo(with id: Int, completion: @escaping(Any, Bool, String?) -> Void) {
+        get("launch", params: ["id": id, "mode":"verbose"], header: nil, responseObject: FullInfoModel.self) { (responseObject, isSuccess, errorMessage) in
+            let fullInfoModel = responseObject as! FullInfoModel
+            print(fullInfoModel)
+        }
+    }
 }

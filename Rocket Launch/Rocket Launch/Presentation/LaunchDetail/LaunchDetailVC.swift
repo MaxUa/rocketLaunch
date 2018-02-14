@@ -9,9 +9,20 @@
 import UIKit
 
 class LaunchDetailVC: BaseVC {
+
+    private lazy var presenter: LaunchDetailPresenter = {
+        var presenter = LaunchDetailPresenter()
+        return presenter
+    }()
+
     var launchID: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        BaseInfoAPIClient().getLaunchFullInfo(with: 1290) { (response, isSuccess, errorMessage) in
+
+        }
 
         // Do any additional setup after loading the view.
     }

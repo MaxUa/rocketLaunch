@@ -16,6 +16,12 @@
 		3709A433203260FE00DABDEC /* BaseInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3709A432203260FE00DABDEC /* BaseInfoModel.swift */; };
 		3786E66220337DF500039314 /* UpcomingLaunchesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3786E66120337DF500039314 /* UpcomingLaunchesPresenter.swift */; };
 		3786E6652033A4E800039314 /* LaunchDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3786E6642033A4E800039314 /* LaunchDetailVC.swift */; };
+		3786E6672033AD4D00039314 /* LaunchDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3786E6662033AD4D00039314 /* LaunchDetailPresenter.swift */; };
+		3786E6692033B0C500039314 /* FullInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3786E6682033B0C500039314 /* FullInfoModel.swift */; };
+		3786E66B2033B1DA00039314 /* LaunchLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3786E66A2033B1DA00039314 /* LaunchLocationModel.swift */; };
+		3786E66D2033B50600039314 /* RocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3786E66C2033B50600039314 /* RocketModel.swift */; };
+		3786E66F2033B5D700039314 /* MissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3786E66E2033B5D700039314 /* MissionModel.swift */; };
+		3786E6712033BB8400039314 /* LaunchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3786E6702033BB8400039314 /* LaunchModels.swift */; };
 		37D385D420322A2E00BE9309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D385D320322A2E00BE9309 /* AppDelegate.swift */; };
 		37D385D920322A2E00BE9309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D385D720322A2E00BE9309 /* Main.storyboard */; };
 		37D385DC20322A2E00BE9309 /* Rocket_Launch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37D385DA20322A2E00BE9309 /* Rocket_Launch.xcdatamodeld */; };
@@ -34,6 +40,12 @@
 		3709A432203260FE00DABDEC /* BaseInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoModel.swift; sourceTree = "<group>"; };
 		3786E66120337DF500039314 /* UpcomingLaunchesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingLaunchesPresenter.swift; sourceTree = "<group>"; };
 		3786E6642033A4E800039314 /* LaunchDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailVC.swift; sourceTree = "<group>"; };
+		3786E6662033AD4D00039314 /* LaunchDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailPresenter.swift; sourceTree = "<group>"; };
+		3786E6682033B0C500039314 /* FullInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfoModel.swift; sourceTree = "<group>"; };
+		3786E66A2033B1DA00039314 /* LaunchLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchLocationModel.swift; sourceTree = "<group>"; };
+		3786E66C2033B50600039314 /* RocketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketModel.swift; sourceTree = "<group>"; };
+		3786E66E2033B5D700039314 /* MissionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionModel.swift; sourceTree = "<group>"; };
+		3786E6702033BB8400039314 /* LaunchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModels.swift; sourceTree = "<group>"; };
 		37D385D020322A2E00BE9309 /* Rocket Launch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rocket Launch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D385D320322A2E00BE9309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37D385D820322A2E00BE9309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				3709A432203260FE00DABDEC /* BaseInfoModel.swift */,
+				3786E6682033B0C500039314 /* FullInfoModel.swift */,
+				3786E66A2033B1DA00039314 /* LaunchLocationModel.swift */,
+				3786E66C2033B50600039314 /* RocketModel.swift */,
+				3786E66E2033B5D700039314 /* MissionModel.swift */,
+				3786E6702033BB8400039314 /* LaunchModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				3786E6642033A4E800039314 /* LaunchDetailVC.swift */,
+				3786E6662033AD4D00039314 /* LaunchDetailPresenter.swift */,
 			);
 			path = LaunchDetail;
 			sourceTree = "<group>";
@@ -265,12 +283,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rocket Launch/Pods-Rocket Launch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftProgressHUD/SwiftProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -302,13 +320,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3786E66F2033B5D700039314 /* MissionModel.swift in Sources */,
 				3709A42D203251F600DABDEC /* ApiClient.swift in Sources */,
 				3786E6652033A4E800039314 /* LaunchDetailVC.swift in Sources */,
 				3709A4242032348F00DABDEC /* UpcomingLaunchesVC.swift in Sources */,
+				3786E6692033B0C500039314 /* FullInfoModel.swift in Sources */,
 				3709A431203254DA00DABDEC /* BaseInfoAPIClient.swift in Sources */,
 				3786E66220337DF500039314 /* UpcomingLaunchesPresenter.swift in Sources */,
+				3786E66D2033B50600039314 /* RocketModel.swift in Sources */,
+				3786E6712033BB8400039314 /* LaunchModels.swift in Sources */,
 				37D385DC20322A2E00BE9309 /* Rocket_Launch.xcdatamodeld in Sources */,
 				37D385D420322A2E00BE9309 /* AppDelegate.swift in Sources */,
+				3786E6672033AD4D00039314 /* LaunchDetailPresenter.swift in Sources */,
+				3786E66B2033B1DA00039314 /* LaunchLocationModel.swift in Sources */,
 				3709A42620323DD700DABDEC /* LaunchBaseInfoTVCell.swift in Sources */,
 				3709A42B2032495300DABDEC /* AlamofireManager.swift in Sources */,
 				3709A433203260FE00DABDEC /* BaseInfoModel.swift in Sources */,

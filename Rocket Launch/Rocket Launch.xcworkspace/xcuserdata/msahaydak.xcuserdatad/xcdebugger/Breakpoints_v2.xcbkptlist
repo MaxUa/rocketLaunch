@@ -2,4 +2,134 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rocket Launch/Presentation/LaunchDetail/LaunchDetailVC.swift"
+            timestampString = "540260363.7919509"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rocket_Launch.LaunchDetailVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Rocket Launch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/Presentation/LaunchDetail/LaunchDetailVC.swift"
+                  timestampString = "540260363.8021441"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any, Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; () in Rocket_Launch.LaunchDetailVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Rocket Launch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/Presentation/LaunchDetail/LaunchDetailVC.swift"
+                  timestampString = "540260363.804675"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rocket Launch/API/ApiClients/BaseInfoAPIClient/BaseInfoAPIClient.swift"
+            timestampString = "540260363.792024"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getLaunchFullInfo(with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rocket_Launch.BaseInfoAPIClient.getLaunchFullInfo(with: Swift.Int, completion: (Any, Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Rocket Launch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/API/ApiClients/BaseInfoAPIClient/BaseInfoAPIClient.swift"
+                  timestampString = "540260363.8743351"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "389">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; () in Rocket_Launch.BaseInfoAPIClient.getLaunchFullInfo(with: Swift.Int, completion: (Any, Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Rocket Launch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/API/ApiClients/BaseInfoAPIClient/BaseInfoAPIClient.swift"
+                  timestampString = "540260363.877751"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "3627">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rocket Launch/API/ApiClient.swift"
+            timestampString = "540260363.792083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "get(_:params:header:responseObject:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rocket Launch/API/ApiClient.swift"
+            timestampString = "540260363.792413"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "get(_:params:header:responseObject:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

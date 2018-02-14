@@ -1,0 +1,35 @@
+//
+//  LaunchModel.swift
+//  Rocket Launch
+//
+//  Created by Maxym Sahaydak on 2/14/18.
+//  Copyright © 2018 Maxym Sahaydak. All rights reserved.
+//
+
+import Foundation
+struct LaunchModel: Codable {
+    
+}
+
+public struct LaunchesModel: Codable {
+    var status: String?
+    var errorMessage: String?
+    var launches: [BaseInfoModel]?
+    var total: Int?
+    var offset: Int?
+    var count: Int?
+
+    private enum CodingKeys: String, CodingKey {
+        case launches, total, offset, count, status, errorMessage = "msg"
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.launches = try container.decodeIfPresent([BaseInfoModel].self, forKey: .launches)
+        self.total = try container.decodeIfPresent(Int.self, forKey: .total)
+        self.offset = try container.decodeIfPresent(Int.self, forKey: .offset)
+        self.count = try container.decode(Int.self, forKey: .count)
+        self.status = try container.decodeIfPresent(String.self, forKey: .status)
+        self.errorMessage = try container.decodeIfPresent(String.self, forKey: .errorMessage)
+    }
+}
