@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftMessages
 
 
 @UIApplicationMain
@@ -17,6 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        ReachabilityManager.shared.startMonitoring()
+        ReachabilityManager.shared.reachabilityChangedClosure = { isReachable in
+            if !isReachable {
+                self.showMessage()
+            } else {
+                self.hideMessage()
+            }
+        }
+        
         return true
     }
 
@@ -43,6 +54,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         DatabaseManager.shared.saveContext()
     }
+    
+     func showMessage() {
+        var config = SwiftMessages.defaultConfig
+        config.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+        config.duration = .seconds(seconds: 5)
+        config.shouldAutorotate = true
+        
+        SwiftMessages.show(config: config, view: self.messageView)
+    }
+    
+    func hideMessage() {
+        SwiftMessages.hideAll()
+    }
+    
+
+    public var integer: Int = 10
+    lazy var messageView: MessageView = {
+        let messageView = MessageView.viewFromNib(layout: .statusLine)
+        messageView.configureContent(title: "No internet connection", body: "Please check your internet connection", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
+        messageView.backgroundColor = .red
+        return messageView
+    }()
 
 }
 

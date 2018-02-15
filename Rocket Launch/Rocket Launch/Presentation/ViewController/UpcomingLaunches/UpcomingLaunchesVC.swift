@@ -13,6 +13,7 @@ class UpcomingLaunchesVC: BaseVC {
 
     lazy var presenter: UpcomingLaunchesPresenter = {
         var presenter = UpcomingLaunchesPresenter()
+        presenter.view = self
         return presenter
     }()
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0B8E4720358C8000BDF10A /* LaunchBaseDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B8E4520358C8000BDF10A /* LaunchBaseDB+CoreDataProperties.swift */; };
+		2F0B8E4820358C8000BDF10A /* LaunchBaseDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B8E4620358C8000BDF10A /* LaunchBaseDB+CoreDataClass.swift */; };
+		2F0B8E4A20358C9B00BDF10A /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B8E4920358C9B00BDF10A /* ReachabilityManager.swift */; };
 		3709A4212032330900DABDEC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3709A4202032330900DABDEC /* BaseVC.swift */; };
 		3709A4242032348F00DABDEC /* UpcomingLaunchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3709A4232032348F00DABDEC /* UpcomingLaunchesVC.swift */; };
 		3709A42620323DD700DABDEC /* LaunchBaseInfoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3709A42520323DD700DABDEC /* LaunchBaseInfoTVCell.swift */; };
@@ -32,13 +35,14 @@
 		37E7FAB32034CE4C003715D9 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FAB22034CE4C003715D9 /* BasePresenter.swift */; };
 		37E7FAB52034D805003715D9 /* LaunchBaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FAB42034D805003715D9 /* LaunchBaseInfoView.swift */; };
 		37E7FABA2035125B003715D9 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FAB92035125B003715D9 /* DatabaseManager.swift */; };
-		37E7FAC120351850003715D9 /* LaunchBaseDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FABF20351850003715D9 /* LaunchBaseDB+CoreDataClass.swift */; };
-		37E7FAC220351850003715D9 /* LaunchBaseDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FAC020351850003715D9 /* LaunchBaseDB+CoreDataProperties.swift */; };
 		37E7FAC420351DDC003715D9 /* LaunchBaseDB+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FAC320351DDC003715D9 /* LaunchBaseDB+Extension.swift */; };
 		87B13E0A6F4017F2086E97ED /* Pods_Rocket_Launch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40074F1C1ECB512657FBA530 /* Pods_Rocket_Launch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F0B8E4520358C8000BDF10A /* LaunchBaseDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LaunchBaseDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2F0B8E4620358C8000BDF10A /* LaunchBaseDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LaunchBaseDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2F0B8E4920358C9B00BDF10A /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		3709A4202032330900DABDEC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		3709A4232032348F00DABDEC /* UpcomingLaunchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingLaunchesVC.swift; sourceTree = "<group>"; };
 		3709A42520323DD700DABDEC /* LaunchBaseInfoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBaseInfoTVCell.swift; sourceTree = "<group>"; };
@@ -66,8 +70,6 @@
 		37E7FAB22034CE4C003715D9 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		37E7FAB42034D805003715D9 /* LaunchBaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBaseInfoView.swift; sourceTree = "<group>"; };
 		37E7FAB92035125B003715D9 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
-		37E7FABF20351850003715D9 /* LaunchBaseDB+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LaunchBaseDB+CoreDataClass.swift"; path = "/Users/msahaydak/Documents/projects/rocketLaunch/Rocket Launch/Rocket Launch/Database/LaunchBaseDB+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		37E7FAC020351850003715D9 /* LaunchBaseDB+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LaunchBaseDB+CoreDataProperties.swift"; path = "/Users/msahaydak/Documents/projects/rocketLaunch/Rocket Launch/Rocket Launch/Database/LaunchBaseDB+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		37E7FAC320351DDC003715D9 /* LaunchBaseDB+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchBaseDB+Extension.swift"; sourceTree = "<group>"; };
 		40074F1C1ECB512657FBA530 /* Pods_Rocket_Launch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rocket_Launch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B012626BFD521DCAE3D223D /* Pods-Rocket Launch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket Launch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket Launch/Pods-Rocket Launch.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		3709A42720323E9300DABDEC /* API */ = {
 			isa = PBXGroup;
 			children = (
+				2F0B8E4920358C9B00BDF10A /* ReachabilityManager.swift */,
 				3709A42A2032495300DABDEC /* AlamofireManager.swift */,
 				3709A42C203251F600DABDEC /* ApiClient.swift */,
 				3709A42E2032549400DABDEC /* ApiClients */,
@@ -221,8 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				37E7FAB92035125B003715D9 /* DatabaseManager.swift */,
-				37E7FABF20351850003715D9 /* LaunchBaseDB+CoreDataClass.swift */,
-				37E7FAC020351850003715D9 /* LaunchBaseDB+CoreDataProperties.swift */,
+				2F0B8E4620358C8000BDF10A /* LaunchBaseDB+CoreDataClass.swift */,
+				2F0B8E4520358C8000BDF10A /* LaunchBaseDB+CoreDataProperties.swift */,
 				37E7FAC320351DDC003715D9 /* LaunchBaseDB+Extension.swift */,
 			);
 			path = Database;
@@ -340,12 +343,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rocket Launch/Pods-Rocket Launch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ReadMoreTextView/ReadMoreTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftProgressHUD/SwiftProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReadMoreTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,15 +390,15 @@
 				3709A4242032348F00DABDEC /* UpcomingLaunchesVC.swift in Sources */,
 				3786E6692033B0C500039314 /* FullInfoModel.swift in Sources */,
 				37E7FAB52034D805003715D9 /* LaunchBaseInfoView.swift in Sources */,
-				37E7FAC220351850003715D9 /* LaunchBaseDB+CoreDataProperties.swift in Sources */,
+				2F0B8E4720358C8000BDF10A /* LaunchBaseDB+CoreDataProperties.swift in Sources */,
 				3709A431203254DA00DABDEC /* BaseInfoAPIClient.swift in Sources */,
 				3786E66220337DF500039314 /* UpcomingLaunchesPresenter.swift in Sources */,
 				3786E66D2033B50600039314 /* RocketModel.swift in Sources */,
 				3786E6712033BB8400039314 /* LaunchModels.swift in Sources */,
 				37E7FAB12034CC6D003715D9 /* RocketView.swift in Sources */,
 				37E7FABA2035125B003715D9 /* DatabaseManager.swift in Sources */,
-				37E7FAC120351850003715D9 /* LaunchBaseDB+CoreDataClass.swift in Sources */,
 				37D385DC20322A2E00BE9309 /* Rocket_Launch.xcdatamodeld in Sources */,
+				2F0B8E4820358C8000BDF10A /* LaunchBaseDB+CoreDataClass.swift in Sources */,
 				37D385D420322A2E00BE9309 /* AppDelegate.swift in Sources */,
 				3786E6672033AD4D00039314 /* LaunchDetailPresenter.swift in Sources */,
 				37E7FAC420351DDC003715D9 /* LaunchBaseDB+Extension.swift in Sources */,
@@ -403,6 +408,7 @@
 				37E7FAAE2034CB9A003715D9 /* LauncDetailInfoView.swift in Sources */,
 				3709A433203260FE00DABDEC /* BaseInfoModel.swift in Sources */,
 				3709A4212032330900DABDEC /* BaseVC.swift in Sources */,
+				2F0B8E4A20358C9B00BDF10A /* ReachabilityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ import CoreData
 
 class UpcomingLaunchesPresenter: BasePresenter {
 
+    weak var view: UpcomingLaunchesVC?
     //MARK: - Closure
     var reloadTableViewClosure: (()->())?
 
@@ -58,18 +59,22 @@ class UpcomingLaunchesPresenter: BasePresenter {
         self.isLoading = true
         BaseInfoAPIClient().getUpcomingLaunches { [weak self] (responseArr, isSuccess, errorMessage) in
             self?.isLoading = false
-            if let launchesInfoArr = responseArr {
-
-                self?.upcomingLaunchesArr = launchesInfoArr.map({ (model) -> BaseInfoModel in
-                    if DatabaseManager.shared.likedIds.contains(model.id!) {
-                        var modified = model
-                        modified.isLiked = true
-                        return modified
-                    }
-                    return model
-                })
-//                self?.upcomingLaunchesArr = launchesInfoArr
+            if isSuccess {
+                if let launchesInfoArr = responseArr {
+                    
+                    self?.upcomingLaunchesArr = launchesInfoArr.map({ (model) -> BaseInfoModel in
+                        if DatabaseManager.shared.likedIds.contains(model.id!) {
+                            var modified = model
+                            modified.isLiked = true
+                            return modified
+                        }
+                        return model
+                    })
+                }
+            } else {
+                self?.view?.showCustomAlert("Error", text: errorMessage ?? "Something went wrong, try agin later")
             }
+
         }
     }
 
