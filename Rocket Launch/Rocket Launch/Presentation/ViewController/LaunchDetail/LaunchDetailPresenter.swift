@@ -15,7 +15,13 @@ class LaunchDetailPresenter: BasePresenter {
     func loadAlunchDetail(for launchId: Int) {
         self.isLoading = true
         BaseInfoAPIClient().getLaunchFullInfo(with: launchId) { (response, isSuccess, errorMessage) in
-            self.launchFullInfoModel = response
+            if isSuccess {
+                self.launchFullInfoModel = response
+            } else {
+                self.view?.showCustomAlert("Error", text: "Something went wrong, try agin later", handler: { _ in
+                    self.view?.navigationController?.popViewController(animated: true)
+                })            
+            }
             self.isLoading = false
         }
     }
@@ -63,7 +69,7 @@ class LaunchDetailPresenter: BasePresenter {
 
     func locationBtnPressed() {
         if let _latitude = launchFullInfoModel?.location?.pads.first?.latitude, let _longitude = launchFullInfoModel?.location?.pads.first?.longitude {
-            let url = URL(string: "http://maps.apple.com/maps?saddr=\(_latitude),\(_longitude)")!
+            let url = URL(string: "http://maps.apple.com/maps?saddr=&daddr=\(_latitude),\(_longitude)")!
             isLoading = true
             UIApplication.shared.open(url, options: [:], completionHandler: { (isFinished) in
                 self.isLoading = false

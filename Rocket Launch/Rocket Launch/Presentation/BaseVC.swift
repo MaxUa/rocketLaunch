@@ -29,6 +29,18 @@ class BaseVC: UIViewController {
     func hideHUD() {
         SwiftProgressHUD.hideAllHUD()
     }
+    
+    func showCustomAlert(_ title: String, text: String) {
+        let alert = UIAlertController(title: title, message: text, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showCustomAlert(_ title: String, text: String, handler: ((UIAlertAction) -> Swift.Void)?) {
+        let alert = UIAlertController(title: title, message: text, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: handler))
+        self.present(alert, animated: true, completion: nil)
+    }
 
     func initPresenter() {
         fatalError("Presenter should be created for inherited class")
