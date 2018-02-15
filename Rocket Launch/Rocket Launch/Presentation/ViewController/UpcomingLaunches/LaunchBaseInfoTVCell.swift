@@ -7,15 +7,29 @@
 //
 
 import UIKit
-
+protocol RocketLaunchTVCellProtocol: class {
+    func didTapLikeBtn(for id: Int?)
+}
 class RocketLaunchTVCell: UITableViewCell {
+
+    weak var delegate: RocketLaunchTVCellProtocol?
+    var launchId: Int?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.textLabel?.numberOfLines = 0
-        self.detailTextLabel?.numberOfLines = 0
+
         // Initialization code
     }
+
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var subTitleLbl: UILabel!
+    @IBOutlet weak var likeBtn: UIButton!
+
+    @IBAction func likeBtnPressed(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        delegate?.didTapLikeBtn(for: launchId)
+    }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -25,10 +39,13 @@ class RocketLaunchTVCell: UITableViewCell {
     var launchInfo: BaseInfoModel? {
         didSet {
             if let _launchInfo = launchInfo {
-                self.textLabel?.text = _launchInfo.name
-                self.detailTextLabel?.text = _launchInfo.net
+                self.launchId = _launchInfo.id
+                self.titleLbl?.text = _launchInfo.name
+                self.subTitleLbl?.text = _launchInfo.net
             }
         }
     }
+
+    
 
 }

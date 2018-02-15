@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rocket Launch/Presentation/ViewController/LaunchDetail/LaunchDetailPresenter.swift"
-            timestampString = "540347672.101669"
+            timestampString = "540355317.785802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rocket Launch/Presentation/ViewController/LaunchDetail/LaunchDetailVC.swift"
-            timestampString = "540347672.10175"
+            timestampString = "540355317.786141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rocket Launch/Presentation/CustomView/LauncDetailViews/LauncDetailInfoView.swift"
-            timestampString = "540347672.1018161"
+            timestampString = "540355317.786382"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
@@ -102,16 +102,90 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rocket Launch/Presentation/ViewController/UpcomingLaunches/UpcomingLaunchesVC.swift"
-            timestampString = "540347672.101873"
+            timestampString = "540355317.786617"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "initPresenter()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rocket Launch/Presentation/ViewController/UpcomingLaunches/UpcomingLaunchesVC.swift"
+            timestampString = "540355317.786834"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "initPresenter()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Rocket_Launch.UpcomingLaunchesVC.initPresenter() -&gt; ()"
+                  moduleName = "Rocket Launch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/Presentation/ViewController/UpcomingLaunches/UpcomingLaunchesVC.swift"
+                  timestampString = "540350883.077022"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in Rocket_Launch.UpcomingLaunchesVC.initPresenter() -&gt; ()"
+                  moduleName = "Rocket Launch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/Presentation/ViewController/UpcomingLaunches/UpcomingLaunchesVC.swift"
+                  timestampString = "540350883.080914"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rocket Launch/Presentation/ViewController/UpcomingLaunches/UpcomingLaunchesPresenter.swift"
+            timestampString = "540355317.786895"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "didTapLikeBtn(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,46 +195,30 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rocket Launch/Presentation/ViewController/UpcomingLaunches/UpcomingLaunchesVC.swift"
-            timestampString = "540347672.102237"
+            filePath = "Rocket Launch/Database/DatabaseManager.swift"
+            timestampString = "540355317.787101"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "initPresenter()"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "updateFavorite(with:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Rocket_Launch.UpcomingLaunchesVC.initPresenter() -&gt; ()"
-                  moduleName = "Rocket Launch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/Presentation/ViewController/UpcomingLaunches/UpcomingLaunchesVC.swift"
-                  timestampString = "540347584.099854"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "21">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in Rocket_Launch.UpcomingLaunchesVC.initPresenter() -&gt; ()"
-                  moduleName = "Rocket Launch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msahaydak/Documents/projects/rocketLaunch/Rocket%20Launch/Rocket%20Launch/Presentation/ViewController/UpcomingLaunches/UpcomingLaunchesVC.swift"
-                  timestampString = "540347584.103089"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rocket Launch/Database/DatabaseManager.swift"
+            timestampString = "540355317.787655"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "updateFavorite(with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

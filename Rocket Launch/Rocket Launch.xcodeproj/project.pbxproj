@@ -31,6 +31,10 @@
 		37E7FAB12034CC6D003715D9 /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FAB02034CC6D003715D9 /* RocketView.swift */; };
 		37E7FAB32034CE4C003715D9 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FAB22034CE4C003715D9 /* BasePresenter.swift */; };
 		37E7FAB52034D805003715D9 /* LaunchBaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FAB42034D805003715D9 /* LaunchBaseInfoView.swift */; };
+		37E7FABA2035125B003715D9 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FAB92035125B003715D9 /* DatabaseManager.swift */; };
+		37E7FAC120351850003715D9 /* LaunchBaseDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FABF20351850003715D9 /* LaunchBaseDB+CoreDataClass.swift */; };
+		37E7FAC220351850003715D9 /* LaunchBaseDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FAC020351850003715D9 /* LaunchBaseDB+CoreDataProperties.swift */; };
+		37E7FAC420351DDC003715D9 /* LaunchBaseDB+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7FAC320351DDC003715D9 /* LaunchBaseDB+Extension.swift */; };
 		87B13E0A6F4017F2086E97ED /* Pods_Rocket_Launch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40074F1C1ECB512657FBA530 /* Pods_Rocket_Launch.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +65,10 @@
 		37E7FAB02034CC6D003715D9 /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
 		37E7FAB22034CE4C003715D9 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		37E7FAB42034D805003715D9 /* LaunchBaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBaseInfoView.swift; sourceTree = "<group>"; };
+		37E7FAB92035125B003715D9 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		37E7FABF20351850003715D9 /* LaunchBaseDB+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LaunchBaseDB+CoreDataClass.swift"; path = "/Users/msahaydak/Documents/projects/rocketLaunch/Rocket Launch/Rocket Launch/Database/LaunchBaseDB+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		37E7FAC020351850003715D9 /* LaunchBaseDB+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LaunchBaseDB+CoreDataProperties.swift"; path = "/Users/msahaydak/Documents/projects/rocketLaunch/Rocket Launch/Rocket Launch/Database/LaunchBaseDB+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		37E7FAC320351DDC003715D9 /* LaunchBaseDB+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchBaseDB+Extension.swift"; sourceTree = "<group>"; };
 		40074F1C1ECB512657FBA530 /* Pods_Rocket_Launch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rocket_Launch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B012626BFD521DCAE3D223D /* Pods-Rocket Launch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket Launch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket Launch/Pods-Rocket Launch.release.xcconfig"; sourceTree = "<group>"; };
 		C96DF8899EBD16F75C5D3455 /* Pods-Rocket Launch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket Launch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket Launch/Pods-Rocket Launch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				37D385D320322A2E00BE9309 /* AppDelegate.swift */,
+				37E7FAB820351247003715D9 /* Database */,
 				3709A42720323E9300DABDEC /* API */,
 				3709A41F203232ED00DABDEC /* Presentation */,
 				37D385D720322A2E00BE9309 /* Main.storyboard */,
@@ -206,6 +215,17 @@
 				37E7FAB02034CC6D003715D9 /* RocketView.swift */,
 			);
 			path = LauncDetailViews;
+			sourceTree = "<group>";
+		};
+		37E7FAB820351247003715D9 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				37E7FAB92035125B003715D9 /* DatabaseManager.swift */,
+				37E7FABF20351850003715D9 /* LaunchBaseDB+CoreDataClass.swift */,
+				37E7FAC020351850003715D9 /* LaunchBaseDB+CoreDataProperties.swift */,
+				37E7FAC320351DDC003715D9 /* LaunchBaseDB+Extension.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		E7806A9DD05846D83E2F06E0 /* Pods */ = {
@@ -365,14 +385,18 @@
 				3709A4242032348F00DABDEC /* UpcomingLaunchesVC.swift in Sources */,
 				3786E6692033B0C500039314 /* FullInfoModel.swift in Sources */,
 				37E7FAB52034D805003715D9 /* LaunchBaseInfoView.swift in Sources */,
+				37E7FAC220351850003715D9 /* LaunchBaseDB+CoreDataProperties.swift in Sources */,
 				3709A431203254DA00DABDEC /* BaseInfoAPIClient.swift in Sources */,
 				3786E66220337DF500039314 /* UpcomingLaunchesPresenter.swift in Sources */,
 				3786E66D2033B50600039314 /* RocketModel.swift in Sources */,
 				3786E6712033BB8400039314 /* LaunchModels.swift in Sources */,
 				37E7FAB12034CC6D003715D9 /* RocketView.swift in Sources */,
+				37E7FABA2035125B003715D9 /* DatabaseManager.swift in Sources */,
+				37E7FAC120351850003715D9 /* LaunchBaseDB+CoreDataClass.swift in Sources */,
 				37D385DC20322A2E00BE9309 /* Rocket_Launch.xcdatamodeld in Sources */,
 				37D385D420322A2E00BE9309 /* AppDelegate.swift in Sources */,
 				3786E6672033AD4D00039314 /* LaunchDetailPresenter.swift in Sources */,
+				37E7FAC420351DDC003715D9 /* LaunchBaseDB+Extension.swift in Sources */,
 				3786E66B2033B1DA00039314 /* LaunchLocationModel.swift in Sources */,
 				3709A42620323DD700DABDEC /* LaunchBaseInfoTVCell.swift in Sources */,
 				3709A42B2032495300DABDEC /* AlamofireManager.swift in Sources */,

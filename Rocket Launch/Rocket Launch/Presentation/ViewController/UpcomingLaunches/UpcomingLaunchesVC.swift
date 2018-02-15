@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class UpcomingLaunchesVC: BaseVC {
 
@@ -55,6 +56,7 @@ class UpcomingLaunchesVC: BaseVC {
     //MARK: - Private methods
     override func initPresenter() {
         tableView.dataSource = presenter
+        presenter.fetchedResultsController.delegate = self
 
         presenter.loadingStatusUpdated = {[weak self] in
             DispatchQueue.main.async {
@@ -83,6 +85,25 @@ extension UpcomingLaunchesVC {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as? LaunchDetailVC
         vc!.launchID = presenter.selectedLaunchId
+    }
+}
+
+extension UpcomingLaunchesVC: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+
+        case .delete:
+            tableView.deleteRows(at: [indexPath!], with: .automatic)
+
+        case .insert:
+            tableView.insertRows(at: [newIndexPath!], with: .automatic)
+
+        case .update:
+            tableView.reloadRows(at: [indexPath!], with: .automatic)
+
+        default:
+            break
+        }
     }
 }
 

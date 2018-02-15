@@ -39,3 +39,11 @@ public struct BaseInfoModel: Codable, LaunchInfoProtocol {
         self.status = try container.decodeIfPresent(Int.self, forKey: .status)
     }
 }
+
+extension BaseInfoModel {
+    init(with dbModel: LaunchBaseDB) {
+        self.id = Int(dbModel.id)
+        self.name = dbModel.name
+        self.net = dbModel.net
+    }
+}
