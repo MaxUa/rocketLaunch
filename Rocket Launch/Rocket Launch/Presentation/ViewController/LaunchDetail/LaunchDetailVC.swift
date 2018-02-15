@@ -29,6 +29,11 @@ class LaunchDetailVC: BaseVC {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+//        presenter.loadAlunchDetail(for: launchID!)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         presenter.loadAlunchDetail(for: launchID!)
     }
 
@@ -41,28 +46,37 @@ class LaunchDetailVC: BaseVC {
 
     lazy var missionInfoView: LauncDetailInfoView = {
         var missionInfoView = LauncDetailInfoView(frame: .zero)
+        missionInfoView.titleLbl.text = "Mission"
         missionInfoView.icoImage = UIImage(named: "info_ico")
         return missionInfoView
     }()
 
     lazy var rocketInfoView: RocketView = {
         var rocketInfoView = RocketView()
+        rocketInfoView.titleLbl.text = "Rocket"
         rocketInfoView.icoImage = UIImage(named: "rocket_ico")
         rocketInfoView.buttonIco = UIImage(named: "info_btn_ico")
         rocketInfoView.btnPressedClosure = { [weak self] in
-
+            self?.presenter.rocketDetailInfoBtnPressed()
         }
         return rocketInfoView
     }()
 
     lazy var locationView: RocketView = {
         var locationView = RocketView(frame: .zero)
+        locationView.titleLbl.text = "Location"
         locationView.icoImage = UIImage(named: "location_ico")
         locationView.buttonIco = UIImage(named: "location_btn_ico")
         locationView.btnPressedClosure = {[weak self] in
-
+            self?.presenter.locationBtnPressed()
         }
         return locationView
+    }()
+
+    lazy var streamView: LauncDetailInfoView = {
+        var streamView = LauncDetailInfoView(frame: .zero)
+        streamView.icoImage = UIImage(named: "stream_ico")
+        return streamView
     }()
 
     //MARK: -
@@ -72,7 +86,6 @@ class LaunchDetailVC: BaseVC {
         stackView.addArrangedSubview(baseInfoView)
 
         if let _missionDetailStr = presenter.missionDetailStr {
-            missionInfoView.titleLbl.text = "Mission"
             missionInfoView.textView.text = _missionDetailStr
             missionInfoView.subTitleLbl.text = presenter.missionSubTitleStr
 
@@ -80,17 +93,21 @@ class LaunchDetailVC: BaseVC {
         }
 
         if let _rocketModel = presenter.rocketModelStr {
-            rocketInfoView.titleLbl.text = "Rocket"
+            rocketInfoView.subTitleLbl.text = presenter.rocketFamilNameStr
             rocketInfoView.textView.text = _rocketModel
 
             stackView.addArrangedSubview(rocketInfoView)
         }
 
-        if let _location = presenter.locatioStr {
-            locationView.titleLbl.text = "Location"
-            locationView.textView.text = _location
-            
-            stackView.addArrangedSubview(locationView)
+
+        locationView.subTitleLbl.text = presenter.locatioStr
+        locationView.textView.text = presenter.locationDetailsStr
+        stackView.addArrangedSubview(locationView)
+
+        if let _streamUrl = presenter.streamURL {
+            streamView.titleLbl.text = "Stream"
+            streamView.textView.text = _streamUrl.absoluteString
+            stackView.addArrangedSubview(streamView)
         }
     }
 

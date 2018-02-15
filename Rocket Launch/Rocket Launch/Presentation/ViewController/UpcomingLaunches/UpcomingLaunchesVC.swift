@@ -15,6 +15,13 @@ class UpcomingLaunchesVC: BaseVC {
         return presenter
     }()
 
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(handlerefresh), for: .valueChanged)
+        refreshControl.tintColor = UIColor.clear
+        return refreshControl
+    }()
+
     //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
 
@@ -23,9 +30,10 @@ class UpcomingLaunchesVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initPresenter()
+        presenter.loadUpcomingLaunches()
 
+        tableView.addSubview(self.refreshControl)
         tableView.delegate = self
-
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
         tableView.tableFooterView = UIView(frame: .zero)
@@ -35,7 +43,8 @@ class UpcomingLaunchesVC: BaseVC {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.loadUpcomingLaunches()
+//        presenter.loadUpcomingLaunches()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +63,7 @@ class UpcomingLaunchesVC: BaseVC {
                     self?.showHUD()
                 } else {
                     self?.hideHUD()
+                    self?.refreshControl.endRefreshing()
                 }
             }
         }
@@ -61,6 +71,11 @@ class UpcomingLaunchesVC: BaseVC {
         presenter.reloadTableViewClosure = { [weak self] in
             self?.tableView.reloadData()
         }
+    }
+
+    //MARK: - Actions
+    @objc func handlerefresh() {
+        presenter.loadUpcomingLaunches()
     }
 }
 

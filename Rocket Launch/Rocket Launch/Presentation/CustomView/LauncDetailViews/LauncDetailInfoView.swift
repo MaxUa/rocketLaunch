@@ -112,10 +112,10 @@ class LauncDetailInfoView: UIView {
 
         self.textView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            textView.topAnchor.constraint(equalTo: self.subTitleLbl.bottomAnchor, constant: 8.0),
+            textView.topAnchor.constraint(equalTo: self.subTitleLbl.bottomAnchor, constant: 4.0),
             textView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 4.0),
             textView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 4.0),
-            textView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 4.0)
+            textView.bottomAnchor.constraint(lessThanOrEqualTo: self.bottomAnchor, constant: 4.0)
             ])
     }
 
@@ -124,6 +124,9 @@ class LauncDetailInfoView: UIView {
         self.titleLbl.translatesAutoresizingMaskIntoConstraints = false
         self.subTitleLbl.translatesAutoresizingMaskIntoConstraints = false
         self.textView.translatesAutoresizingMaskIntoConstraints = false
+
+
+
 
         NSLayoutConstraint.activate([
             icoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8.0),
@@ -143,7 +146,8 @@ class LauncDetailInfoView: UIView {
             textView.topAnchor.constraint(equalTo: self.subTitleLbl.bottomAnchor, constant: 8.0),
             textView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 4.0),
             textView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 4.0),
-            textView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 4.0)
+            textView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 4.0),
+            textView.heightAnchor.constraint(greaterThanOrEqualToConstant: 24.0)
 
             ])
     }

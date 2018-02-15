@@ -10,6 +10,7 @@
 class RocketView: LauncDetailInfoView {
     lazy var button: UIButton = {
         var button = UIButton(type: .custom)
+        button.addTarget(self, action: #selector(buttonPressed(sender:)), for: .touchUpInside)
         return button
     }()
 
@@ -20,6 +21,10 @@ class RocketView: LauncDetailInfoView {
     }
 
     var btnPressedClosure: (()->Void)?
+
+    @objc func buttonPressed(sender: UIButton) {
+        self.btnPressedClosure?()
+    }
 
     override func additionalContetnLayout() {
         self.addSubview(textView)

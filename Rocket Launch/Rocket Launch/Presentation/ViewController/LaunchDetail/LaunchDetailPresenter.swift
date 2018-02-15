@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class LaunchDetailPresenter: BasePresenter {
     weak var view: LaunchDetailVC?
@@ -14,27 +15,62 @@ class LaunchDetailPresenter: BasePresenter {
     func loadAlunchDetail(for launchId: Int) {
         self.isLoading = true
         BaseInfoAPIClient().getLaunchFullInfo(with: launchId) { (response, isSuccess, errorMessage) in
-            if let _response = response {
-                self.titleStr = _response.name ?? ""
-                self.timeStr = _response.net ?? ""
+            self.launchFullInfoModel = response
+            self.isLoading = false
+        }
+    }
 
-                if let mission = _response.missions.first {
-                    self.missionDetailStr = mission.description
-                    self.missionTitleStr = mission.name
-                }
+    var launchFullInfoModel: FullInfoModel? {
+        didSet {
+            guard let _launchFullInfoModel = launchFullInfoModel else {return}
 
-                if let location = _response.location {
-                    self.locatioStr = location.name
-                }
-                self.rocketModelStr = _response.rocket.name
+            self.titleStr = _launchFullInfoModel.name ?? ""
+            self.timeStr = _launchFullInfoModel.net ?? ""
 
-                DispatchQueue.main.async {
-                    self.view?.updateUI()
-                }
-                self.isLoading = false
+            if let mission = _launchFullInfoModel.missions.first {
+                self.missionDetailStr = mission.description
+                self.missionTitleStr = mission.name
+            }
+
+            if let location = _launchFullInfoModel.location {
+                self.locatioStr = location.name
+                self.locationDetailsStr = location.pads.first?.name
+            }
+
+            self.rocketFamilNameStr = _launchFullInfoModel.rocket.familyname
+            self.rocketModelStr = _launchFullInfoModel.rocket.name
+
+            if let _streamUrl = _launchFullInfoModel.vidURL {
+                self.streamURL = URL(string: /*_streamUrl*/"http://www.spacex.com/webcast/")
+            }
+            self.streamURL = URL(string: /*_streamUrl*/"http://www.spacex.com/webcast/")
+
+            DispatchQueue.main.async {
+                self.view?.updateUI()
             }
         }
     }
+
+    func rocketDetailInfoBtnPressed() {
+        if let _rocketWikiUrl = launchFullInfoModel?.rocket.wikiURL {
+            let url = URL(string: _rocketWikiUrl)!
+            isLoading = true
+            UIApplication.shared.open(url, options: [:], completionHandler: { (isFinished) in
+                self.isLoading = false
+            })
+        }
+    }
+
+    func locationBtnPressed() {
+        if let _latitude = launchFullInfoModel?.location?.pads.first?.latitude, let _longitude = launchFullInfoModel?.location?.pads.first?.longitude {
+            let url = URL(string: "http://maps.apple.com/maps?saddr=\(_latitude),\(_longitude)")!
+            isLoading = true
+            UIApplication.shared.open(url, options: [:], completionHandler: { (isFinished) in
+                self.isLoading = false
+            })
+        }
+    }
+
 
 
     var titleStr: String = ""
@@ -44,10 +80,13 @@ class LaunchDetailPresenter: BasePresenter {
     var missionSubTitleStr: String?
     var missionDetailStr: String?
 
+    var rocketFamilNameStr: String?
     var rocketModelStr: String?
-    var locatioStr: String?
 
-    var streamStr: String?
+    var locatioStr: String?
+    var locationDetailsStr: String?
+
+    var streamURL: URL?
 
     
 }
