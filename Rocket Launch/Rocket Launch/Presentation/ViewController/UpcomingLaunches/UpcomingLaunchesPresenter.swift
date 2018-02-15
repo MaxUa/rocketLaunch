@@ -13,8 +13,10 @@ import CoreData
 class UpcomingLaunchesPresenter: BasePresenter {
 
     weak var view: UpcomingLaunchesVC?
+    var shouldReloadTV = false
     //MARK: - Closure
     var reloadTableViewClosure: (()->())?
+    var reloadCellClosure: ((IndexPath)->Void)?
 
     //MARK: - FetchedResultsController
     var fetchedResultsController: NSFetchedResultsController<LaunchBaseDB>!
@@ -45,23 +47,33 @@ class UpcomingLaunchesPresenter: BasePresenter {
         }
     }
 
+    private func itemIndex(for itemId: Int) -> Int? {
+        let index = self.upcomingLaunchesArr.index { (model) -> Bool in
+            return model.id == itemId
+        }
+        return index
+    }
     //MARK: - Private variables
     private var upcomingLaunchesArr: [BaseInfoModel] = [BaseInfoModel]() {
         didSet {
-            
-            reloadTableViewClosure?()
+            if shouldReloadTV  {
+                shouldReloadTV = false
+                reloadTableViewClosure?()
+            }
         }
     }
+    
+    
 
     private(set) var selectedLaunchId: Int?
     
     func loadUpcomingLaunches() {
         self.isLoading = true
+        shouldReloadTV = true
         BaseInfoAPIClient().getUpcomingLaunches { [weak self] (responseArr, isSuccess, errorMessage) in
             self?.isLoading = false
             if isSuccess {
                 if let launchesInfoArr = responseArr {
-                    
                     self?.upcomingLaunchesArr = launchesInfoArr.map({ (model) -> BaseInfoModel in
                         if DatabaseManager.shared.likedIds.contains(model.id!) {
                             var modified = model
@@ -82,7 +94,6 @@ class UpcomingLaunchesPresenter: BasePresenter {
         let baseInfoModel = upcomingLaunchesArr[indexPath.row]
         selectedLaunchId = baseInfoModel.id
     }
-
 
     //MARK: - Private fucn
     fileprivate func checkIsLaunchLiked(for launchId: Int) -> Bool {
@@ -109,7 +120,6 @@ extension UpcomingLaunchesPresenter: UITableViewDataSource {
         } else {
             numberOfRows = upcomingLaunchesArr.count
         }
-
         return numberOfRows
     }
 
@@ -119,19 +129,29 @@ extension UpcomingLaunchesPresenter: UITableViewDataSource {
         if indexPath.section == 1 {
             let launcInfoModel = upcomingLaunchesArr[indexPath.row]
             cell.launchInfo = launcInfoModel
-//            cell.isLiked = checkIsLaunchLiked(for: launcInfoModel.id!)
         } else {
             cell.launchInfo = BaseInfoModel(with: fetchedResultsController.object(at: indexPath))
             cell.isLiked = true
-
         }
         return cell
     }
 }
 
 extension UpcomingLaunchesPresenter: RocketLaunchTVCellProtocol {
-    func didTapLikeBtn(for id: Int?) {
+    func didTapLikeBtn(for id: Int?, isLiked: Bool) {
         if let selectedLaunchMode = launcInfoModel(with: id) {
+            self.upcomingLaunchesArr = self.upcomingLaunchesArr.map({ (model) -> BaseInfoModel in
+                if id == model.id {
+                    var newModel = model
+                    newModel.isLiked = isLiked
+                    return newModel
+                }
+                return model
+            })
+            if let reloadIndex = self.itemIndex(for: id!) {
+                reloadCellClosure?(IndexPath(row: reloadIndex, section: 1))
+            }
+            
             DatabaseManager.shared.updateFavorite(with: selectedLaunchMode)
         }
     }

@@ -47,9 +47,9 @@ class LaunchDetailPresenter: BasePresenter {
             self.rocketModelStr = _launchFullInfoModel.rocket.name
 
             if let _streamUrl = _launchFullInfoModel.vidURL {
-                self.streamURL = URL(string: /*_streamUrl*/"http://www.spacex.com/webcast/")
+                self.streamURL = URL(string: _streamUrl)
             }
-            self.streamURL = URL(string: /*_streamUrl*/"http://www.spacex.com/webcast/")
+            
 
             DispatchQueue.main.async {
                 self.view?.updateUI()

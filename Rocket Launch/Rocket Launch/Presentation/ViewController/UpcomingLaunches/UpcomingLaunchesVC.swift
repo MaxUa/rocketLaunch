@@ -74,7 +74,13 @@ class UpcomingLaunchesVC: BaseVC {
         presenter.reloadTableViewClosure = { [weak self] in
             self?.tableView.reloadData()
         }
+        
+        presenter.reloadCellClosure = {[weak self] (indexPath) in
+            self?.tableView.reloadRows(at: [indexPath], with: .none)
+        }
+
     }
+    
 
     //MARK: - Actions
     @objc func handlerefresh() {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="29Y-hn-ael">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14087.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="29Y-hn-ael">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14075.4"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-804" y="43"/>
         </scene>
-        <!--Upcoming LaunchesVC-->
+        <!--Upcoming-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="UpcomingLaunchesVC" customModule="Rocket_Launch" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,17 +43,17 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7UO-RU-ZKu" id="KhZ-66-AAr">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="137.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="137.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz5-VP-8fj">
-                                                    <rect key="frame" x="23" y="15" width="302" height="21"/>
+                                                    <rect key="frame" x="28" y="14.999999999999998" width="292" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxp-j0-TvK">
-                                                    <rect key="frame" x="333" y="49" width="40" height="40"/>
+                                                    <rect key="frame" x="328" y="49" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="P6r-x8-pJS"/>
                                                         <constraint firstAttribute="height" constant="40" id="YCi-Ds-I75"/>
@@ -65,7 +65,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0u0-yh-Uz0">
-                                                    <rect key="frame" x="23" y="44" width="302" height="17"/>
+                                                    <rect key="frame" x="28" y="43.333333333333336" width="292" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HIX-bS-ild"/>
+                    <navigationItem key="navigationItem" title="Upcoming" id="HIX-bS-ild"/>
                     <connections>
                         <outlet property="tableView" destination="YEK-an-OCN" id="BVR-nA-9pQ"/>
                     </connections>
@@ -113,7 +113,7 @@
             </objects>
             <point key="canvasLocation" x="27.536231884057973" y="42.391304347826093"/>
         </scene>
-        <!--Launch DetailVC-->
+        <!--Detail Info-->
         <scene sceneID="lXD-vu-ffB">
             <objects>
                 <viewController id="vci-BJ-DSl" customClass="LaunchDetailVC" customModule="Rocket_Launch" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,6 +147,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T2A-Dy-hIh"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Detail Info" id="s6T-Sw-Xhw"/>
                     <connections>
                         <outlet property="stackView" destination="gef-BW-Osi" id="MIx-Ny-k1P"/>
                     </connections>

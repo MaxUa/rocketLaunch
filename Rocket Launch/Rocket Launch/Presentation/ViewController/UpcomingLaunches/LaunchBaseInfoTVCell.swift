@@ -8,7 +8,7 @@
 
 import UIKit
 protocol RocketLaunchTVCellProtocol: class {
-    func didTapLikeBtn(for id: Int?)
+    func didTapLikeBtn(for id: Int?, isLiked: Bool)
 }
 class RocketLaunchTVCell: UITableViewCell {
 
@@ -32,8 +32,9 @@ class RocketLaunchTVCell: UITableViewCell {
     @IBOutlet weak var likeBtn: UIButton!
 
     @IBAction func likeBtnPressed(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-        delegate?.didTapLikeBtn(for: launchId)
+        let isLiked = !self.isLiked
+        self.isLiked = isLiked
+        delegate?.didTapLikeBtn(for: launchId, isLiked: isLiked)
     }
 
 
