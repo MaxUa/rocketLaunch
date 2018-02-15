@@ -72,7 +72,7 @@ class UpcomingLaunchesPresenter: BasePresenter {
                     })
                 }
             } else {
-                self?.view?.showCustomAlert("Error", text: "Something went wrong, try agin later")
+                self?.view?.showCustomAlert("Error", text: errorMessage ?? "Something went wrong, try agin later")
             }
 
         }

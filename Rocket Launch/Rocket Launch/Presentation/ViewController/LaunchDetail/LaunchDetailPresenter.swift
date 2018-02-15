@@ -18,7 +18,7 @@ class LaunchDetailPresenter: BasePresenter {
             if isSuccess {
                 self.launchFullInfoModel = response
             } else {
-                self.view?.showCustomAlert("Error", text: "Something went wrong, try agin later", handler: { _ in
+                self.view?.showCustomAlert("Error", text: errorMessage ?? "Something went wrong, try agin later", handler: { _ in
                     self.view?.navigationController?.popViewController(animated: true)
                 })            
             }
