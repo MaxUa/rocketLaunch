@@ -24,6 +24,7 @@ public struct BaseInfoModel: Codable, LaunchInfoProtocol {
     var tbdtime: Int?
     var tbddate: Int?
     var status: Int?
+    var isLiked: Bool = false
 
     private enum CodingKeys:String, CodingKey {
         case id, name, net, tbdtime, tbddate, status

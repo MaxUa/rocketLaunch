@@ -14,6 +14,12 @@ class RocketLaunchTVCell: UITableViewCell {
 
     weak var delegate: RocketLaunchTVCellProtocol?
     var launchId: Int?
+    var isLiked: Bool = false {
+        didSet {
+            likeBtn.isSelected = isLiked
+        }
+    }
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,6 +48,7 @@ class RocketLaunchTVCell: UITableViewCell {
                 self.launchId = _launchInfo.id
                 self.titleLbl?.text = _launchInfo.name
                 self.subTitleLbl?.text = _launchInfo.net
+                self.isLiked = _launchInfo.isLiked
             }
         }
     }

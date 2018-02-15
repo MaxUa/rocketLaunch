@@ -15,12 +15,14 @@ class DatabaseManager {
     private init() { }
 
     func addToFavorite(_ baseLauchInfo: BaseInfoModel) {
+        _likedIds = nil
         let launch = LaunchBaseDB(context: self.persistentContainer.viewContext)
         launch.fill(with: baseLauchInfo)
         self.saveContext()
     }
 
     func removeLauncModel(_ model: LaunchBaseDB) {
+        _likedIds = nil
         persistentContainer.viewContext.delete(model)
         self.saveContext()
     }
@@ -42,6 +44,27 @@ class DatabaseManager {
         }
     }
 
+    func getAllLikedIds() -> [Int] {
+        let fetchRequest = LaunchBaseDB.createFetchRequest()
+        do {
+            let results = try persistentContainer.viewContext.fetch(fetchRequest)
+            let idsArr = results.map{Int($0.id)}
+            return idsArr
+        } catch {
+            return [Int]()
+        }
+    }
+
+    //MARK: - Tmp solution
+    private var _likedIds:[Int]?
+    var likedIds:[Int] {
+        get {
+            if _likedIds == nil {
+                _likedIds = getAllLikedIds()
+            }
+            return _likedIds!
+        }
+    }
 
 
     // MARK: - Core Data stack

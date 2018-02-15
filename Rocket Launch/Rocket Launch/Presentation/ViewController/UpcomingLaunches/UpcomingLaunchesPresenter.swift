@@ -47,6 +47,7 @@ class UpcomingLaunchesPresenter: BasePresenter {
     //MARK: - Private variables
     private var upcomingLaunchesArr: [BaseInfoModel] = [BaseInfoModel]() {
         didSet {
+            
             reloadTableViewClosure?()
         }
     }
@@ -58,7 +59,16 @@ class UpcomingLaunchesPresenter: BasePresenter {
         BaseInfoAPIClient().getUpcomingLaunches { [weak self] (responseArr, isSuccess, errorMessage) in
             self?.isLoading = false
             if let launchesInfoArr = responseArr {
-                self?.upcomingLaunchesArr = launchesInfoArr
+
+                self?.upcomingLaunchesArr = launchesInfoArr.map({ (model) -> BaseInfoModel in
+                    if DatabaseManager.shared.likedIds.contains(model.id!) {
+                        var modified = model
+                        modified.isLiked = true
+                        return modified
+                    }
+                    return model
+                })
+//                self?.upcomingLaunchesArr = launchesInfoArr
             }
         }
     }
@@ -66,6 +76,12 @@ class UpcomingLaunchesPresenter: BasePresenter {
     func didSelectCell(at indexPath: IndexPath) {
         let baseInfoModel = upcomingLaunchesArr[indexPath.row]
         selectedLaunchId = baseInfoModel.id
+    }
+
+
+    //MARK: - Private fucn
+    fileprivate func checkIsLaunchLiked(for launchId: Int) -> Bool {
+        return DatabaseManager.shared.likedIds.contains(launchId)
     }
 }
 
@@ -96,9 +112,12 @@ extension UpcomingLaunchesPresenter: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LaunchCellID") as! RocketLaunchTVCell
         cell.delegate = self
         if indexPath.section == 1 {
-            cell.launchInfo = upcomingLaunchesArr[indexPath.row]
+            let launcInfoModel = upcomingLaunchesArr[indexPath.row]
+            cell.launchInfo = launcInfoModel
+//            cell.isLiked = checkIsLaunchLiked(for: launcInfoModel.id!)
         } else {
             cell.launchInfo = BaseInfoModel(with: fetchedResultsController.object(at: indexPath))
+            cell.isLiked = true
 
         }
         return cell
@@ -106,11 +125,9 @@ extension UpcomingLaunchesPresenter: UITableViewDataSource {
 }
 
 extension UpcomingLaunchesPresenter: RocketLaunchTVCellProtocol {
-
     func didTapLikeBtn(for id: Int?) {
         if let selectedLaunchMode = launcInfoModel(with: id) {
             DatabaseManager.shared.updateFavorite(with: selectedLaunchMode)
         }
-
     }
 }
